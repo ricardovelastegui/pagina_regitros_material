@@ -42,8 +42,9 @@ export class LoginComponent implements OnInit{
       this.error();
       this.form.reset();
     }
-
   }
+
+  
   error(){
     this._snackBar.open('usuario o contraseña no valido', '', {
       duration:5000,
@@ -60,9 +61,9 @@ export class LoginComponent implements OnInit{
     }, 1500);
   }
   ngOnInit(): void {
-
     this.usersService.getUsers().subscribe( users => {
       this.listaMadre = this.usersService.transformUsers(users);
+      console.log(this.listaMadre)
     });
   }
 

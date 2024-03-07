@@ -1,1 +1,11 @@
-<p>productos works!</p>
+<div *ngFor="let product of productos">
+    <h2>{{ product.title }}</h2>
+    <p><strong>Price:</strong> ${{ product.price }}</p>
+    <p>{{ product.description }}</p>
+    <div *ngFor="let image of product.images">
+      <img [src]="image" alt="Product Image">
+    </div>
+    <p><strong>Created At:</strong> {{ product.creationAt }}</p>
+    <p><strong>Updated At:</strong> {{ product.updatedAt }}</p>
+  </div>
+  

@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { timeout } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -17,6 +18,7 @@ export class RegisterComponent {
   password?: string;
   role?: string;
   avatar?: string;
+
   loading=false;
 
   constructor(private usersService: UsersService, private router: Router){
