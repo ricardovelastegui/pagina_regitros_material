@@ -12,15 +12,16 @@ import { UsuarioService } from 'src/app/services/usuario.service';
 })
 export class CrearUsuarioComponent implements OnInit {
 
-  sexo: any[]=['Masculino', 'Femenino'];
+  role: any[]=['Administrador', 'Usuario'];
   form: FormGroup;
 
   constructor(private fb: FormBuilder, private _usuarioService: UsuarioService, private router: Router, private _snackBar: MatSnackBar){
     this.form = this.fb.group({
-      usuario:['', Validators.required, Validators.pattern(/^[A-Za-z\s\xF1\xD1]+$/)],
-      nombre:['', Validators.required],
-      apellido:['', Validators.required],
-      sexo:['', Validators.required],
+      name:['', Validators.required],
+      email:['', Validators.required],
+      password:['', Validators.required],
+      role:['', Validators.required], 
+      avatar:['',Validators.required]
     })
   }
   ngOnInit(): void {
@@ -29,10 +30,11 @@ export class CrearUsuarioComponent implements OnInit {
 
   agregaruser(){
     const user: Usuario = {
-      usuario: this.form.value.usuario,
-      nombre: this.form.value.nombre,
-      apellido: this.form.value.apellido,
-      sexo: this.form.value.sexo
+      name: this.form.value.name,
+      email: this.form.value.email,
+      password: this.form.value.password,
+      role: this.form.value.role,
+      avatar: this.form.value.avatar
     }
     this._usuarioService.agregaruser(user);
     this.router.navigate(['/dashboard/usuarios'])

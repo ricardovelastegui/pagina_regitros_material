@@ -6,37 +6,43 @@
     <mat-card style="margin-top: 10px;" >
         <form [formGroup]="form" (ngSubmit)="agregaruser()">
             <mat-grid-list cols="4" rowHeight="70px">
+
                 <mat-grid-tile [colspan]="1" [rowspan]="1">
                     <mat-form-field class="ancho">
-                        <mat-label>USUARIO</mat-label>
-                        <input matInput formControlName="usuario">
+                        <mat-label>NAME</mat-label>
+                        <input matInput formControlName="name">
                       </mat-form-field>
                 </mat-grid-tile>
+
                 <mat-grid-tile [colspan]="3" [rowspan]="5" >
                     <img src="./assets/images_material/usuario.png" width="250">
                 </mat-grid-tile>
+
                 <mat-grid-tile [colspan]="1" [rowspan]="1" >
                     <mat-form-field class="ancho">
-                        <mat-label>NOMBRE</mat-label>
-                        <input matInput formControlName="nombre">
+                        <mat-label>EMAIL</mat-label>
+                        <input matInput formControlName="email">
                       </mat-form-field>
                 </mat-grid-tile>
+
                 <mat-grid-tile [colspan]="1" [rowspan]="1" >
                     <mat-form-field class="ancho">
-                        <mat-label>APELLIDO</mat-label>
-                        <input matInput formControlName="apellido">
+                        <mat-label>PASSWORD</mat-label>
+                        <input matInput formControlName="password">
                       </mat-form-field>
                 </mat-grid-tile>
+
                 <mat-grid-tile [colspan]="1" [rowspan]="1" >
                     <mat-form-field class="ancho">
-                        <mat-label>SEXO</mat-label>
-                        <mat-select formControlName="sexo">
-                            <mat-option *ngFor="let item of sexo" [value]="item">
+                        <mat-label>ROLE</mat-label>
+                        <mat-select formControlName="role">
+                            <mat-option *ngFor="let item of role" [value]="item">
                                 {{item}}
                             </mat-option>
                         </mat-select>
                     </mat-form-field>
                 </mat-grid-tile>
+
                 <mat-grid-tile [colspan]="1" [rowspan]="1" >
                     <button mat-raised-button style="margin-right: 20px;">Volver</button>
                     <button type="submit" [disabled]="form.invalid" color="primary">Aceptar</button>   

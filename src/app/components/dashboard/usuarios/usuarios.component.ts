@@ -16,7 +16,7 @@ export class UsuariosComponent implements OnInit {
 
   listUsuarios: Usuario[] = [];
   
-  displayedColumns: string[] = ['usuario', 'nombre', 'apellido', 'sexo', 'acciones'];
+  displayedColumns: string[] = ['name', 'email', 'password', 'role', 'avatar'];
   dataSource! : MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -29,7 +29,6 @@ export class UsuariosComponent implements OnInit {
     this.cargarUsuarios();
   }
   
-
   cargarUsuarios(){ this.listUsuarios = this._usuarioService.getUsuarios();
     this.dataSource = new MatTableDataSource(this.listUsuarios);
    }

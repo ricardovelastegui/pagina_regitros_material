@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
-import { ReportesComponent } from './reportes/reportes.component';
 import { CrearUsuarioComponent } from './usuarios/crear-usuario/crear-usuario.component';
 
 const routes: Routes = [
@@ -12,8 +11,6 @@ const routes: Routes = [
     { path:'', component:InicioComponent},
     { path:'usuarios', component:UsuariosComponent},
     { path:'crear-usuario', component:CrearUsuarioComponent},
-    { path:'reportes', component:ReportesComponent}
-
   ] }
 ];
 

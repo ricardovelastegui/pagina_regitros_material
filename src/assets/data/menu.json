@@ -8,7 +8,7 @@
         "redirect":"/dashboard/usuarios"
     },
     {
-        "nombre": "Reportes",
-        "redirect":"/dashboard/reportes"
+        "nombre": "Productos",
+        "redirect":"/dashboard/productos"
     }
 ]

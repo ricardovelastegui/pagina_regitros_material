@@ -7,11 +7,8 @@ import { Usuario } from '../interfaces/usuario';
 export class UsuarioService {
 
   listUsuarios: Usuario[] = [
-    {usuario: 'jpperez', nombre: 'Juan', apellido: 'perez', sexo: 'Masculino'},
-    {usuario: 'mgomez', nombre: 'mario', apellido: 'gomez', sexo: 'Masculino'},
-    {usuario: 'ricanvel', nombre: 'ricardo', apellido: 'velastegui', sexo: 'Masculino'},
-    {usuario: 'pvelaste', nombre: 'paulette', apellido: 'velastegui', sexo: 'Femenino'},
-    {usuario: 'anamel', nombre: 'Juan', apellido: 'perez', sexo: 'Femenino'},
+    {name: 'juan', email: 'juan@sasf.net', password: 'perrito123', role: 'contador', avatar:"imagen"},
+    
   ];
 
   constructor() { }
@@ -19,12 +16,10 @@ export class UsuarioService {
   getUsuarios(){
     return this.listUsuarios.slice();
   }
-
   eliminarUsuario(index: number){
     this.listUsuarios.splice(index, 1);
 
   }
-
   agregaruser(user: Usuario){
     this.listUsuarios.unshift(user);
   }
