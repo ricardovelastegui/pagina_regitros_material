@@ -1,10 +1,35 @@
 
-<div class="register">
-  <h1>hola mundo!</h1>
-  
+<div class="body">
+  <div class="register">
+    <mat-spinner *ngIf="loading" class="spinner" diameter="50"></mat-spinner>
+    <form *ngIf="!loading" [formGroup]="form" (ngSubmit)="registrar()">
+
+      <h1>Register</h1>
+      <mat-form-field class="ancho">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name">
+      </mat-form-field>
+      <mat-form-field class="ancho">
+        <mat-label>email@sasf.net</mat-label>
+        <input matInput formControlName="email">
+      </mat-form-field>
+      <mat-form-field class="ancho">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password">
+      </mat-form-field>
+      <mat-form-field class="ancho">
+        <mat-label>Role</mat-label>
+        <input matInput formControlName="Role">
+      </mat-form-field>
+      <mat-form-field class="ancho">
+        <mat-label>Avatar</mat-label>
+        <input matInput formControlName="avatar">
+      </mat-form-field>
+      <br>
+      <button type="submit" class="ancho" mat-raised-button color="primary" [disabled]="form.invalid">Registrarse</button>
+    </form>
+  </div>
 </div>
-
-
 
 
 

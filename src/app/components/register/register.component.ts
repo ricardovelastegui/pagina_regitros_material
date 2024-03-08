@@ -19,18 +19,39 @@ export class RegisterComponent {
   role?: string;
   avatar?: string;
 
+  form: FormGroup;
   loading=false;
 
-  constructor(private usersService: UsersService, private router: Router){
+  constructor(private usersService: UsersService, private router: Router, private fb: FormBuilder, private _snackBar: MatSnackBar){
+    this.form = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', Validators.required],
+      password: ['', Validators.required],
+      role: ['', Validators.required],
+      avatar: ['', Validators.required]
+      
+
+      
+    })
   }  
 
-  register(){
-    const user ={ name:this.name, email:this.email, password:this.password, role:this.role, avatar:this.avatar };
-    this.usersService.register(user).subscribe(response => {
-      console.log('Usuario registrado');
+  registrar(){
+    if (this.form.valid) {
+      console.log(this.form);
+      const email = this.form.value.email;
+      const password= this.form.value.password;
+      const name = this.form.value.name;
+      const role = this.form.value.role;
+      const avatar = this.form.value.avatar;
+      // Ahora puedes ejecutar lo que necesites hacer con los datos
       this.fakeloading();
-    })
-    
+    } else {
+      // Aquí puedes mostrar un mensaje de error o realizar alguna acción si el formulario no es válido
+      this._snackBar.open('Por favor, complete todos los campos', 'Cerrar', {
+        duration: 3000
+      });
+    }
+
   }
 
   fakeloading(){

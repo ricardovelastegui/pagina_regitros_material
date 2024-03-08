@@ -33,11 +33,17 @@ export class LoginComponent implements OnInit{
     const password = this.form.value.password;
     console.log(email);
     console.log(password);
-    const user = this.listaMadre.find(user => user.email===this.email && user.password===this.password);
-    if(user){
+    //const user = this.listaMadre.find(user => user.email===this.email && user.password===this.password);
+    if(email== 'ksabando' && password=='sasfdominio123'){
       //redireccionamos al dashboard
       this.fakeloading();
-    } else{
+
+    } 
+    if(){
+      //si es otro usuario se lo redirecciona al dashboard excepto pero que no
+      //pueda entrar a la pestaña usuario
+    }
+    else{
       //mostramos mensaje de error
       this.error();
       this.form.reset();
