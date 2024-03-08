@@ -34,22 +34,23 @@ export class LoginComponent implements OnInit{
     console.log(email);
     console.log(password);
     //const user = this.listaMadre.find(user => user.email===this.email && user.password===this.password);
-    if(email== 'ksabando' && password=='sasfdominio123'){
+    if( email== 'ksabando@sasf.net' && password=='sasfdominio123' ||  ){
+
       //redireccionamos al dashboard
       this.fakeloading();
-
     } 
-    if(){
-      //si es otro usuario se lo redirecciona al dashboard excepto pero que no
-      //pueda entrar a la pestaña usuario
-    }
+
+    // if(){
+    //   //si es otro usuario se lo redirecciona al dashboard excepto pero que no
+    //   //pueda entrar a la pestaña usuario
+    // }
+
     else{
       //mostramos mensaje de error
       this.error();
       this.form.reset();
     }
   }
-
   
   error(){
     this._snackBar.open('usuario o contraseña no valido', '', {

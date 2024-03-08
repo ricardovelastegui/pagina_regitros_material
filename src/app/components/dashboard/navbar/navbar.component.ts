@@ -1,13 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { Menu } from 'src/app/interfaces/menu';
 import { MenuService } from 'src/app/services/menu.service';
-
+import { Usuario } from 'src/app/interfaces/usuario';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit{
+
+  email?: string;
+  password?: string;
   
   menu: Menu[] = []; //array inicializado vacio
   constructor(private _menuService: MenuService){}

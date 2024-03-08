@@ -5,6 +5,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { CrearUsuarioComponent } from './usuarios/crear-usuario/crear-usuario.component';
 import { AppComponent } from 'src/app/app.component';
+import { ProductosComponent } from './productos/productos.component';
 
 const routes: Routes = [
 
@@ -12,6 +13,7 @@ const routes: Routes = [
     { path:'', component:InicioComponent},
     { path:'usuarios', component:UsuariosComponent},
     { path:'crear-usuario', component:CrearUsuarioComponent},
+    { path: 'productos', component:ProductosComponent }
     //{ path: 'logout', component:AppComponent}
   ] }
 ];
