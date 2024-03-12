@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit{
   form: FormGroup;
   loading= false;
   listaMadre: any[] = []; 
-  email?: string;
+  email?: string; 
   password?: string;
 
   constructor(private fb: FormBuilder, private _snackBar: MatSnackBar, private router: Router, private usersService: UsersService){
@@ -34,17 +34,10 @@ export class LoginComponent implements OnInit{
     console.log(email);
     console.log(password);
     //const user = this.listaMadre.find(user => user.email===this.email && user.password===this.password);
-    if( email== 'ksabando@sasf.net' && password=='sasfdominio123' ||  ){
-
+    if( (email== 'ksabando@sasf.net' && password=='sasfdominio123') || (email== 'carlos@sasf.net' && password=='perrito123') ){
       //redireccionamos al dashboard
       this.fakeloading();
-    } 
-
-    // if(){
-    //   //si es otro usuario se lo redirecciona al dashboard excepto pero que no
-    //   //pueda entrar a la pestaña usuario
-    // }
-
+    }
     else{
       //mostramos mensaje de error
       this.error();
@@ -60,6 +53,14 @@ export class LoginComponent implements OnInit{
 
     })
   }
+
+  // fakeloading2(){
+  //   this.loading=true;
+  //   setTimeout( () => {
+  //     this.router.navigate(['productos']);
+  //   } )
+  // }
+  
   fakeloading(){
 
     this.loading=true;

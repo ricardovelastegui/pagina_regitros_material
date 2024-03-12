@@ -1,18 +1,18 @@
 <mat-toolbar color="primary">
     <span>AppUsers</span>
     <span class="example-spacer"></span>
-
-    <button mat-button routerLink="/dashboard">Dashboard</button>
-    <button mat-button *ngIf="(email==='cperez@sasf.net') && (password==='normal123')" routerLink="/dashboard/usuarios">Usuarios</button>
-    <button mat-button routerLink="/dashboard/productos">Productos</button>
-
-    <!-- <button mat-button *ngFor="let item of menu" [routerLink]="item.redirect">{{item.nombre}}</button> -->
+    
+      <button mat-button routerLink="/dashboard">Dashboard</button>
+      <button mat-button routerLink="/dashboard/usuarios">Usuarios</button>
+      <button mat-button routerLink="/dashboard/productos">Productos</button>
+    
     
     <span class="example-spacer"></span>
     <button routerLink="/login" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
         <mat-icon>logout</mat-icon>
-      </button>
+    </button>
   </mat-toolbar>
 
 
 
+    <!-- <button mat-button *ngFor="let item of menu" [routerLink]="item.redirect">{{item.nombre}}</button> -->

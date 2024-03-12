@@ -21,7 +21,7 @@ export class CrearUsuarioComponent implements OnInit {
       email:['', Validators.required],
       password:['', Validators.required],
       role:['', Validators.required], 
-      avatar:['',Validators.required]
+      avatar:['']
     })
   }
   ngOnInit(): void {
