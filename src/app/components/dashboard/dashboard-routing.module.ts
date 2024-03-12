@@ -6,16 +6,17 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
 import { CrearUsuarioComponent } from './usuarios/crear-usuario/crear-usuario.component';
 import { AppComponent } from 'src/app/app.component';
 import { ProductosComponent } from './productos/productos.component';
-
+import { adminGuard } from 'src/app/services/admin.guard';
 const routes: Routes = [
 
   { path: '', component: DashboardComponent, children:[
     { path:'', component:InicioComponent},
-    { path:'usuarios', component:UsuariosComponent},
+    { path:'usuarios', component:UsuariosComponent, canActivate:[adminGuard] },
     { path:'crear-usuario', component:CrearUsuarioComponent},
     { path: 'productos', component:ProductosComponent }
     //{ path: 'logout', component:AppComponent}
-  ] }
+  ] }   
+
 ];
 
 @NgModule({
