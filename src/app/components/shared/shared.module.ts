@@ -22,6 +22,8 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSelectModule} from '@angular/material/select';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
 
 @NgModule({
   declarations: [
@@ -45,7 +47,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatSortModule,
     MatCardModule,
     MatGridListModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDatepickerModule
   ],
   exports:[
     MatSlideToggleModule,
@@ -64,7 +67,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatSortModule,
     MatCardModule,
     MatGridListModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDatepickerModule
   ]
 })
 export class SharedModule { }

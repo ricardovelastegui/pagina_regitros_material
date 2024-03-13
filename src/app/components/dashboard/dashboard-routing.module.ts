@@ -7,13 +7,15 @@ import { CrearUsuarioComponent } from './usuarios/crear-usuario/crear-usuario.co
 import { AppComponent } from 'src/app/app.component';
 import { ProductosComponent } from './productos/productos.component';
 import { adminGuard } from 'src/app/services/admin.guard';
+import { EditarproductosComponent } from '../editarproductos/editarproductos.component';
 const routes: Routes = [
 
   { path: '', component: DashboardComponent, children:[
     { path:'', component:InicioComponent},
     { path:'usuarios', component:UsuariosComponent, canActivate:[adminGuard] },
     { path:'crear-usuario', component:CrearUsuarioComponent},
-    { path: 'productos', component:ProductosComponent }
+    { path: 'productos', component:ProductosComponent },
+    { path: 'editarproductos', component:EditarproductosComponent }
     //{ path: 'logout', component:AppComponent}
   ] }   
 

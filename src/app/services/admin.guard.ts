@@ -4,7 +4,7 @@ import { UsersService } from './users.service';
 
 export const adminGuard: CanActivateFn = (route, state) => {
   const usersService= inject(UsersService);
-  return true;
+  return true;  // usersService.isAuth();
   console.log(usersService.isAuth());
 };
 

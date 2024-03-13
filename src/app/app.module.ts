@@ -30,6 +30,7 @@ import { EditarproductosComponent } from './components/editarproductos/editarpro
     SharedModule,
     FormsModule
   ],
+  // provideNativeDateAdapter()
   providers: [],
   bootstrap: [AppComponent]
 })

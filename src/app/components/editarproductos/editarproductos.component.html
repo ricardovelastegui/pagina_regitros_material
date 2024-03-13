@@ -1,1 +1,62 @@
-<p>editarproductos works!</p>
+<div class="container">
+    <mat-toolbar>
+        <span>Editar Usuario</span>
+    </mat-toolbar>
+
+    <mat-card style="margin-top: 10px;">
+        <form [formGroup]="form" (ngSubmit)="agregarproducto()">
+            <mat-grid-list cols="5" rowHeight="70px">
+
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label>TITULO</mat-label>
+                        <input matInput formControlName="titulo">
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile [colspan]="3" [rowspan]="5">
+                    <img src="" width="250">
+                </mat-grid-tile>
+
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label>PRECIO</mat-label>
+                        <input matInput formControlName="price">
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                    <mat-form-field class="ancho">
+                        <mat-label>DESCRIPCION</mat-label>
+                        <input matInput formControlName="description">
+                    </mat-form-field>
+                </mat-grid-tile>
+
+
+                <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                    <mat-form-field>
+                        <mat-label>FECHA DE CREACION</mat-label>
+                        <input matInput formControlName="creationAt">
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+                    <mat-form-field>
+                        <mat-label>FECHA DE ACTUALiZACION</mat-label>
+                        <input matInput formControlName="updateAt">
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <button type="submit" [disabled]="form.invalid" color="primary">Aceptar</button>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </form>
+    </mat-card>
+</div>
