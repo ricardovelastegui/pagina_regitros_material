@@ -31,7 +31,6 @@ export class EditarproductosComponent implements OnInit {
   }
 
   ngOnInit(): void {
-      form:FormGroup;
   }
 
   agregarproducto(){
