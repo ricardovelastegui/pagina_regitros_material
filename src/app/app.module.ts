@@ -13,7 +13,8 @@ import { LoginComponent } from './components/login/login.component';
 import { SharedModule } from './components/shared/shared.module';
 import { RegisterComponent } from './components/register/register.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { EditarproductosComponent } from './components/editarproductos/editarproductos.component';
+import { EditarproductosComponent } from './components/adminproductos/editarproductos/editarproductos.component';
+import { AdminproductosComponent } from './components/adminproductos/adminproductos.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { EditarproductosComponent } from './components/editarproductos/editarpro
     LoginComponent,
     RegisterComponent,
     NotFoundComponent,
-    EditarproductosComponent
+    EditarproductosComponent,
+    AdminproductosComponent
   ],
   imports: [
     BrowserModule,

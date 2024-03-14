@@ -53,10 +53,10 @@ export class UsuariosComponent implements OnInit {
       horizontalPosition: 'center',
       verticalPosition: 'bottom',
 
-    })
+    });
 
   }
 
-//hola trece de marzo
+//hola catorce de marzo
 
 }

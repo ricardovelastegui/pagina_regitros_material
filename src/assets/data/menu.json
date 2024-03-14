@@ -10,5 +10,9 @@
     {
         "nombre": "Productos",
         "redirect":"/dashboard/productos"
+    },
+    {
+        "nombre": "Adminproductos",
+        "redirect":"/dashboard/adminproductos"
     }
 ]

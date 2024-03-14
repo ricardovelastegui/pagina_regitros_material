@@ -35,7 +35,7 @@ export class EditarproductosComponent implements OnInit {
 
   agregarproducto(){
     const product: Productos ={
-      id:this.form.value.id,
+
       title:this.form.value.title,
       price:this.form.value.price,
       description:this.form.value.description,
