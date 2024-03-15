@@ -16,7 +16,7 @@ export class AdminproductosComponent implements OnInit {
   listadeproductos: Productos[] =[];
   listproductos: Productos[]=[];
 
-  displayedColumns: string[] =['title', 'price', 'description','creationAt', 'updateAt'];
+  displayedColumns: string[] =['title', 'price', 'description','creationAt', 'acciones'];
 
   dataSource! : MatTableDataSource<any>;
 
@@ -26,6 +26,7 @@ export class AdminproductosComponent implements OnInit {
   constructor(private _productosService: ProductosService, private _snackBar: MatSnackBar){}
 
   ngOnInit(): void {
+    this.cargarProductos();
 
   }
   cargarProductos(){

@@ -19,11 +19,11 @@ export class EditarproductosComponent implements OnInit {
 
   constructor(private fb: FormBuilder, private _snackBar: MatSnackBar, private router: Router, private _productosService: ProductosService ){
     this.form=this.fb.group({
-      id:['', Validators.required],
+      // id:['', Validators.required],
       title:['', Validators.required],
       price:['', Validators.required],
       description:['', Validators.required],
-      images:[''],
+      // images:[''],
       creationAt:['', Validators.required],
       updateAt:['', Validators.required]
 
@@ -41,7 +41,7 @@ export class EditarproductosComponent implements OnInit {
       description:this.form.value.description,
       images:this.form.value.images,
       creationAt:this.form.value.creationAt,
-      updatedAt:this.form.value.updateAt
+      // updatedAt:this.form.value.updateAt
     }
     this._productosService.agregarproducto(product);
     this.router.navigate(['dashboard/editarproductos'])

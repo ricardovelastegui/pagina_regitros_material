@@ -10,9 +10,8 @@ export class ProductosService {
   constructor( private http:HttpClient ) { }
   listproductos: Productos[]=[];
   listadeproductos: Productos[] =[
-    {title:'gorra nike', price:27, description:'color blanco para jugar tennis', images:'https://media.istockphoto.com/id/497040301/es/foto/sombrero-blanco-de-b%C3%A9isbol.jpg?s=612x612&w=0&k=20&c=-Jmi2btfmAQXPAfz7-uyvqBFoMXEv5HfD_Hv_9oZNUA=', creationAt:'01/12/2021', updatedAt:'01/12/2021'}
+    {title: 'gorra nike', price: 27, description: 'color blanco para jugar tennis', images: 'https://media.istockphoto.com/id/497040301/es/foto/sombrero-blanco-de-b%C3%A9isbol.jpg?s=612x612&w=0&k=20&c=-Jmi2btfmAQXPAfz7-uyvqBFoMXEv5HfD_Hv_9oZNUA=', creationAt: '01/12/2021'}
   ];
-
 
 
   //get para consumir de la api rest
@@ -30,6 +29,8 @@ export class ProductosService {
     
   }
   eliminarproducto(index:number){
-    this.listadeproductos.splice(index,1)
+    this.listadeproductos.splice(index,1);
   }
+
+  //15-3-2024  18:11
 }

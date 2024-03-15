@@ -4,7 +4,7 @@
         <div class="example-spacer"></div>
         <button mat-raised-button color="primary" routerLink="/dashboard/editarproductos">AÑADIR</button>
     </mat-toolbar>
-    <div *ngIf="listadeproductos.length>0">
+    <div *ngIf="listadeproductos.length>0" >
 
         <mat-form-field>
             <mat-label>Filter</mat-label>
@@ -30,10 +30,10 @@
                     <th mat-header-cell *matHeaderCellDef mat-sort-header> Fecha Creacion </th>
                     <td mat-cell *matCellDef="let element">{{ element.creationAt }}</td>
                 </ng-container>
-                <ng-container matColumnDef="updateAt">
+                <!-- <ng-container matColumnDef="updateAt">
                     <th mat-header-cell *matHeaderCellDef mat-sort-header> Fecha de Actualizacion </th>
                     <td mat-cell *matCellDef="let element">{{ element.updateAt }}</td>
-                </ng-container>
+                </ng-container> -->
         
                 <ng-container matColumnDef="acciones">
                     <th mat-header-cell *matHeaderCellDef> </th>
@@ -53,6 +53,7 @@
                 <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
             </table>
             <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+
         </div>
     </div>
     <h2 *ngIf="listadeproductos.length==0">No hay productos para mostrar</h2>

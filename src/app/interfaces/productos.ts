@@ -5,6 +5,6 @@ export interface Productos{
     description: string;
     images: string;
     creationAt: string;
-    updatedAt: string;
+    // updatedAt: string;
 
 }
